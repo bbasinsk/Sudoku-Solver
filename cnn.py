@@ -11,7 +11,7 @@ import cv2
 
 batch_size = 128
 num_classes = 10
-epochs = 16
+epochs = 100
 img_rows = 33
 img_cols = 33
 
@@ -41,9 +41,10 @@ def predict_puzzle(model, img_path):
         guess = prediction.index(accuracy)
         puzzle.append(guess)
         print('Position:', i + 1, 'Guess:', guess, 'Confidence:', accuracy)
-    for row in range(1, 10):
-        for col in range(1, 10):
-            # print(puzzle[row])
+    for row in range(0, 9):
+        for col in range(0, 9):
+            print(puzzle[row*9 + col], end='.')
+        print('')
 
 all_inputs = []
 all_labels = []
