@@ -1,10 +1,6 @@
 import cv2
 
 
-def main():
-    get_one_puzzle('sudoku.jpg')
-
-
 def get_one_puzzle(img):
 
     # Reading the image
@@ -67,3 +63,7 @@ def _get_corners(contours):
     corners = [top_left, top_right, bot_right, bot_left]
 
     return corners
+
+for i in range(0, 12):
+    get_one_puzzle('')
+get_one_puzzle('sudoku.jpg')
