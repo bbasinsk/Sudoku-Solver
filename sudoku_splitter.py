@@ -15,7 +15,7 @@ def _answers(index):
     return digits
 
 
-for puz_ind in range(1, 7):
+for puz_ind in range(1, 16):
     image = cv2.imread('puzzles_crop/' + str(puz_ind) + '.jpg', cv2.IMREAD_GRAYSCALE)
     digits = _answers(puz_ind)
 
